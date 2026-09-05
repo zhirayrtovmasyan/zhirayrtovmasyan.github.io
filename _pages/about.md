@@ -2,7 +2,6 @@
 layout: about
 title: About
 permalink: /
-subtitle: M.Sc. Student in Computer Science at KAUST
 
 profile:
   align: right
