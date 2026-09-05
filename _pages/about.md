@@ -4,7 +4,11 @@ title: About
 permalink: /
 subtitle: M.Sc. Student in Computer Science at KAUST
 
-profile: false
+profile:
+  align: right
+  image: profile.jpg
+  image_circular: false
+  more_info:
 
 selected_papers: false
 social: true
