@@ -6,7 +6,7 @@ subtitle: M.Sc. Student in Computer Science at KAUST
 
 profile: false
 
-selected_papers: false
+selected_papers: true
 social: true
 
 announcements:
