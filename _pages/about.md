@@ -5,7 +5,7 @@ permalink: /
 
 profile:
   align: right
-  image: GEVA3799.jpg
+  image: GEVA3799.JPG
   image_circular: false
   more_info:
 
