@@ -6,7 +6,7 @@ subtitle: M.Sc. Student in Computer Science at KAUST
 
 profile: false
 
-selected_papers: true
+selected_papers: false
 social: true
 
 announcements:
@@ -53,3 +53,9 @@ GPA: **19.3/20**
 - **ICLR 2026** — Poster Presenter, Rio de Janeiro, Brazil
 - **KAUST Rising Stars in AI Symposium 2026** — Poster Presenter
 - **Distributed Training in the Era of Large Models, 2025** — KAUST
+
+<h2>
+  <a href="/publications/" style="color: inherit">Selected Publications</a>
+</h2>
+
+{% include selected_papers.liquid %}
