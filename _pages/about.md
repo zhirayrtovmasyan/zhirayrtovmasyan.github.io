@@ -29,25 +29,25 @@ Optimization for Machine Learning · Large-Scale and Distributed Learning · Fed
 ## Research & Industry Experience
 
 **CISPA Helmholtz Center for Information Security**  
-*Research Intern, June–August 2026*  
+_Research Intern, June–August 2026_  
 Supervised by Prof. Sebastian Stich.  
 Research on optimization methods for distributed learning, including FedMuon and SCAFFOLD.
 
 **King Abdullah University of Science and Technology (KAUST)**  
-*Visiting Student, September 2024–March 2025 · Remote Visiting Student, April–July 2025*  
+_Visiting Student, September 2024–March 2025 · Remote Visiting Student, April–July 2025_  
 Center of Excellence for Generative AI. Supervised by Prof. Peter Richtárik.
 
 **Aerodynamics LLC**  
-*Junior ML Engineer, October 2023–September 2024*  
+_Junior ML Engineer, October 2023–September 2024_  
 Worked on computer vision projects.
 
 ## Education
 
 **King Abdullah University of Science and Technology (KAUST)**  
-*M.Sc. in Computer Science, 2025–Present*
+_M.Sc. in Computer Science, 2025–Present_
 
 **Yerevan State University**  
-*B.Sc. in Computer Science, 2018–2024*  
+_B.Sc. in Computer Science, 2018–2024_  
 GPA: **19.3/20**
 
 ## Selected Presentations
