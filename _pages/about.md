@@ -22,7 +22,7 @@ I am especially interested in designing optimization algorithms that better capt
 
 ## Research Interests
 
-Optimization for Machine Learning · Large-Scale and Distributed Learning · Optimization for Deep Learning
+Optimization for Machine Learning · Large-Scale and Distributed Learning · Federated Learning
 
 ## Research & Industry Experience
 
