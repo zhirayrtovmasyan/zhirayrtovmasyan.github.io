@@ -2,6 +2,8 @@
 layout: about
 title: about
 permalink: /
+nav: true
+nav_order: 1
 subtitle: M.Sc. Student in Computer Science at KAUST
 
 profile: false
