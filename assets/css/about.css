@@ -1,0 +1,58 @@
+/* Loaded only by _pages/about.md; the theme still owns the layout and colors. */
+.post > article > .profile img {
+  aspect-ratio: 4 / 5;
+  height: auto;
+  object-fit: cover;
+  object-position: 48% 20%;
+}
+
+.about-social {
+  text-align: left;
+}
+
+.about-social .contact-icons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.75rem;
+  font-size: 2rem;
+  line-height: 1.5;
+}
+
+.about-social .contact-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.about-sections {
+  clear: both;
+  padding-top: 0.5rem;
+}
+
+.about-sections > h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 2.05rem;
+  line-height: 1.25;
+}
+
+@media (min-width: 576px) {
+  .post > article > .profile {
+    max-width: 255px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .post > article > .profile {
+    float: none;
+    width: 70%;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-sections > h2 {
+    font-size: 1.75rem;
+  }
+}
