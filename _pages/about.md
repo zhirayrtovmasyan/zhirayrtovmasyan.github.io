@@ -10,7 +10,7 @@ profile:
   more_info:
 
 selected_papers: false
-social: true
+social: false
 
 announcements:
   enabled: false
@@ -19,13 +19,27 @@ latest_posts:
   enabled: false
 ---
 
-I am an M.Sc. student in Computer Science at King Abdullah University of Science and Technology (KAUST), working with Prof. Peter Richtárik. My research interests are broadly in optimization for machine learning, particularly large-scale and distributed learning.
+<link rel="stylesheet" href="{{ '/assets/css/about.css' | relative_url | bust_file_cache }}">
+
+I am an M.Sc. student in Computer Science at KAUST, working with Prof. Peter Richtárik. My research interests are broadly in optimization for machine learning, particularly large-scale and distributed learning.
 
 I am especially interested in designing optimization algorithms that better capture the geometry of modern learning models, and in understanding how computational and communication constraints should shape their design at scale.
+
+<div class="social about-social">
+  <div class="contact-icons">{% social_links %}</div>
+</div>
+
+<div class="about-sections" markdown="1">
 
 ## Research Interests
 
 Optimization for Machine Learning · Large-Scale and Distributed Learning · Federated Learning
+
+<h2>
+  <a href="{{ '/publications/' | relative_url }}" style="color: inherit">Selected Publications</a>
+</h2>
+
+{% include selected_papers.liquid %}
 
 ## Research & Industry Experience
 
@@ -57,8 +71,4 @@ GPA: **19.3/20**
 - **KAUST Rising Stars in AI Symposium 2026** — Poster Presenter
 - **Distributed Training in the Era of Large Models, 2025** — KAUST
 
-<h2>
-  <a href="/publications/" style="color: inherit">Selected Publications</a>
-</h2>
-
-{% include selected_papers.liquid %}
+</div>
