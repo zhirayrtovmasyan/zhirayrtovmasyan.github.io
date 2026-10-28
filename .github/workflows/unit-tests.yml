@@ -16,6 +16,7 @@ on:
       - "_projects/**"
       - "assets/**"
       - "test/**"
+      - "bin/sync_cv_publications.cjs"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/unit-tests.yml"
@@ -34,6 +35,7 @@ on:
       - "_projects/**"
       - "assets/**"
       - "test/**"
+      - "bin/sync_cv_publications.cjs"
       - "package.json"
       - "package-lock.json"
       - ".github/workflows/unit-tests.yml"
@@ -68,6 +70,9 @@ jobs:
 
       - name: Run style contract lint 🧷
         run: npm run lint:style-contract
+
+      - name: Test CV publication sync
+        run: node --test test/cv_publications.test.cjs
 
       - name: Install build prerequisites 🔧
         run: |

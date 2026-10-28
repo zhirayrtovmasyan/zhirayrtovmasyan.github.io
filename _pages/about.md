@@ -60,6 +60,7 @@ Worked on computer vision projects.
 
 **King Abdullah University of Science and Technology (KAUST)**  
 _M.Sc. in Computer Science, 2025–Present_
+GPA: **4.0/4.0**
 
 **Yerevan State University**  
 _B.Sc. in Computer Science, 2018–2024_  

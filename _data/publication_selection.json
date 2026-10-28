@@ -1,0 +1,32 @@
+[
+  {
+    "_comment": "Set visibility to selected for both the homepage and Publications page, included for the Publications page only, or excluded to hide the paper from both. Unlisted papers stay hidden. Keep existing keys unchanged. See docs/CV_PUBLICATION_SYNC.md for adding new papers and activating the sync.",
+    "key": "gruntkowska2026error",
+    "title": "Error Feedback for Muon and Friends",
+    "arxiv": "2510.00643",
+    "visibility": "selected"
+  },
+  {
+    "key": "tovmasyan2026revisiting",
+    "title": "Revisiting Stochastic Proximal Point Methods: Generalized Smoothness and Similarity",
+    "arxiv": "2502.03401",
+    "visibility": "selected"
+  },
+  {
+    "key": "tovmasyan2026rennala",
+    "title": "Rennala MVR: Improved Time Complexity for Parallel Stochastic Optimization via Momentum-Based Variance Reduction",
+    "arxiv": "2605.08871",
+    "visibility": "selected"
+  },
+  {
+    "key": "shulgin2026scaled",
+    "title": "Scaled Momentum Variance Reduction in Non-Euclidean Geometry",
+    "visibility": "selected"
+  },
+  {
+    "key": "tovmasyan2026scaffold",
+    "title": "SCAFFOLD under Hessian Similarity: Sharp Convergence Rates",
+    "arxiv": "2610.35663",
+    "visibility": "selected"
+  }
+]
