@@ -7,6 +7,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "_data/publication_selection.json"
+      - "bin/sync_cv_publications.cjs"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -34,6 +36,8 @@ on:
       - main
     paths:
       - "assets/**"
+      - "_data/publication_selection.json"
+      - "bin/sync_cv_publications.cjs"
       - "**.bib"
       - "**.html"
       - "**.js"
@@ -84,6 +88,8 @@ jobs:
           cache: "npm"
       - name: Install JS deps 📦
         run: npm ci
+      - name: Apply publication selection
+        run: node bin/sync_cv_publications.cjs --selection-only
       - name: Update _config.yml ⚙️
         uses: fjogeleit/yaml-update-action@main
         with:

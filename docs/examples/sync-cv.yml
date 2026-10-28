@@ -1,0 +1,76 @@
+name: Sync CV and publications to personal website
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - cv.pdf
+      - cv.tex
+      - .github/workflows/sync-cv.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sync-cv-to-website
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Check website token
+        env:
+          WEBSITE_CV_TOKEN: ${{ secrets.WEBSITE_CV_TOKEN }}
+        run: |
+          if [ -z "$WEBSITE_CV_TOKEN" ]; then
+            echo "::error::Add the WEBSITE_CV_TOKEN Actions secret to this CV repository. Use a fine-grained token restricted to zhirayrtovmasyan.github.io with Contents read and write permission."
+            exit 1
+          fi
+
+      - name: Check out latest CV
+        uses: actions/checkout@v6
+        with:
+          ref: main
+          path: source
+          persist-credentials: false
+          sparse-checkout: |
+            cv.pdf
+            cv.tex
+          sparse-checkout-cone-mode: false
+
+      - name: Check out website
+        uses: actions/checkout@v6
+        with:
+          repository: zhirayrtovmasyan/zhirayrtovmasyan.github.io
+          ref: main
+          path: website
+          token: ${{ secrets.WEBSITE_CV_TOKEN }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Copy PDF, sync publications, and publish update
+        working-directory: website
+        run: |
+          test -s ../source/cv.pdf
+          test -s ../source/cv.tex
+          # Validate and sync publications before staging either file.
+          node bin/sync_cv_publications.cjs ../source/cv.tex
+          mkdir -p assets/pdf
+          cp ../source/cv.pdf assets/pdf/cv.pdf
+          git add -- assets/pdf/cv.pdf _bibliography/papers.bib
+          if git diff --cached --quiet; then
+            echo "Website CV and publications are already up to date."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Sync CV and publications"
+          # Preserve website changes pushed while this job was running.
+          git pull --rebase origin main
+          git push origin HEAD:main
